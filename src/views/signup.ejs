@@ -42,7 +42,7 @@
       <div class="signup-content">
           <div class="signup-form">
               <h2 class="form-title">Sign Up</h2>
-              <form action="<%=redirect%>" class="register-form" id="register-form" onsubmit="return validate()">
+              <form method="POST" action="/signup/register" class="register-form" id="register-form" onsubmit="return validate()">
                   <div class="form-group">
                       <label for="first_name"><i class="zmdi zmdi-account material-icons-name"></i>
                           <a href="#" data-toggle="tooltip" title="Click the line to enter your first name">

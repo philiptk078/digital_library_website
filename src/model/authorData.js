@@ -10,8 +10,8 @@ const Schema = mongoose.Schema;
 
 const authorSchema = new Schema({ 
     author: String,
-    title: String,
-    genre: String,
+    books: String,
+    description: String,
     image: String
 });
 

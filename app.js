@@ -7,7 +7,7 @@ const nav = [
     {link:'/signup', name:'Sign Up'}
 ];
 const navWelcome = [
-    {link:'/welcomeUser', name:'Digital Library'},
+    {link:'/welcomeUser', name:'Library'},
     {link:'/books', name:'Books'},
     {link:'/authors', name:'Autours'}
 ];
@@ -17,13 +17,11 @@ const navAdmin = [
 const navAddBook = [
     {link:'/adminlogin', name:'Admin'}, 
     {link:'/addBook', name:'Add Book'},  
-    {link:'/addAuthor', name:'Add Author'} 
+    {link:'/addAuthor', name:'Add Author'},
+    {link:'/books', name:'Edit Books'},
+    {link:'/authors', name:'Edit Autours'}
 ];
-const navEdit = [
-    {link:'/adminlogin', name:'Admin'}, 
-    {link:'/editBooks', name:'Edit Book'},  
-    {link:'/editAuthors', name:'Edit Author'} 
-];
+
 const navSignOut = [
     {link:'/', name:'Log Out'}, 
 ];
@@ -38,7 +36,6 @@ const authorsRouter = require('./src/routes/authorsRouters')(navWelcome,navSignO
 const adminloginRouter = require('./src/routes/adminloginRouters')(navAdmin);
 const addbookRouter = require('./src/routes/addbookRouters')(navAddBook,navSignOut);
 const addauthorRouter = require('./src/routes/addauthorRouters')(navAddBook,navSignOut);
-const editbooksRouter = require('./src/routes/editBooksRouters')(navAddBook,navSignOut);
 
 // view engine
 app.set('view engine','ejs');
@@ -56,7 +53,6 @@ app.use('/authors',authorsRouter);
 app.use('/adminlogin',adminloginRouter);
 app.use('/addBook',addbookRouter);
 app.use('/addAuthor',addauthorRouter);
-app.use('/editBooks',editbooksRouter);
 
 
 // home page router

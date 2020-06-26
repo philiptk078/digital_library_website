@@ -6,10 +6,10 @@
 		<title><%=title%></title>
 		<meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" href="img/digital_lib_icon.png">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/img/digital_lib_icon.png">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -26,9 +26,9 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <%for(i=0;i<navAddBook.length;i++){%>
+        <%for(i=0;i<navWelcome.length;i++){%>
         <li>
-          <a href="<%=navAddBook[i].link%>"><%=navAddBook[i].name%></a>
+          <a href="<%=navWelcome[i].link%>"><%=navWelcome[i].name%></a>
         </li>
         <%}%>
       </ul>
@@ -50,30 +50,34 @@
         <div class="panel">
           <div class="panel-body">
             <div class="container">
-              <h1 style="color: black;">Add Books</h1>
+              <h1 style="color: black;">Edit Books</h1>
               <div class="row">
                 <div class="col-md-4" style="border: solid rgb(3, 100, 35) 4px;">
-                  <form method="POST" action="/editBooks/update" name="editBooks" class="pb-5">
+                  <form method="POST" action="/books/update" name="editBooks" class="pb-5">
                       <div class="form-group" style="padding-top: 15px;">
                         <label for="title"><b>Title</b></label>
-                        <input type="text" placeholder="title name" name="title" value="<%=data.title%>" style="margin-left: 43px;"><br>
+                        <input type="text" placeholder="title name" name="title" value="<%=book.title%>" style="margin-left: 43px;"><br>
                       </div>
                       <div class="form-group">
                         <label for="author"><b> Author</b></label>
-                        <input type="text" placeholder="author name" name="author" value="<%=data.author%>" style="margin-left: 25px;"><br>
+                        <input type="text" placeholder="author name" name="author" value="<%=book.author%>" style="margin-left: 25px;"><br>
                       </div>
                       <div class="form-group">
                         <label for="author"><b>Genre</b></label>
-                        <input type="text" placeholder="genre name" name="genre" value="<%=data.genre%>" style="margin-left: 31px;"><br>
+                        <input type="text" placeholder="genre name" name="genre" value="<%=book.genre%>" style="margin-left: 31px;"><br>
                       </div>
                       <div class="form-group">
                         <label for="author"><b>Image</b></label>
-                      <input type="file" name="image" value="<%=data.image%>"  id="image1" style="margin-left: 75px; margin-top: -25px;"><br>
+                      <input type="file" name="image" value="<%=book.image%>" style="margin-left: 75px; margin-top: -25px;"><br>
                       </div>
                       <div class="form-group">
-                        <input type="hidden" name= "id" value="<%=data._id%>">
+                        <input type="hidden" value="<%=book._id%>" name="id">
                         <button type="submit" class="btn btn-primary">Update Book</button>
                       </div>
+                  </form>
+                  <form action="/books/delete/<%=book._id%>" >
+                      <input type="hidden" value="<%=book._id%>" name="id">
+                      <button type="submit" class="btn btn-primary" style="margin-top: -86px; margin-left: 38%;">Delete Book</button>
                   </form>
                 </div>
               </div>

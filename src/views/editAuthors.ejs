@@ -6,10 +6,10 @@
 		<title><%=title%></title>
 		<meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" href="img/digital_lib_icon.png">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/img/digital_lib_icon.png">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -26,9 +26,9 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <%for(i=0;i<navAddBook.length;i++){%>
+        <%for(i=0;i<navWelcome.length;i++){%>
         <li>
-          <a href="<%=navAddBook[i].link%>"><%=navAddBook[i].name%></a>
+          <a href="<%=navWelcome[i].link%>"><%=navWelcome[i].name%></a>
         </li>
         <%}%>
       </ul>
@@ -46,35 +46,38 @@
 <!-- Form-EditAuthors--> 
 <div class="container">
     <div class="row">
-      
       <div class="col-md-12"> 
-        
         <div class="panel">
           <div class="panel-body">
             <div class="container">
-              <h1 style="color: black;">Add Authors</h1>
+              <h1 style="color: black;">Edit Authors</h1>
               <div class="row">
                 <div class="col-md-4" style="border: solid rgb(3, 100, 35) 4px;">
-                  <form method="POST" action="/addAuthor/add" class="pb-5">
+                  <form method="POST" action="/authors/update" name="editBooks" class="pb-5">
                       <div class="form-group" style="padding-top: 15px;">
-                        <label for="title"><b>Author</b></label>
-                        <input type="text" placeholder="author name" name="title" style="margin-left: 25px;"><br>
+                        <label for="author"><b> Author</b></label>
+                        <input type="text" placeholder="Author name" name="author" value="<%=author.author%>" style="margin-left: 62px;"><br>
                       </div>
                       <div class="form-group">
-                        <label for="author"><b>Title</b></label>
-                        <input type="text" placeholder="title name" name="author" style="margin-left: 43px;"><br>
+                        <label for="title"><b>Book</b></label>
+                        <input type="text" placeholder="Books name" name="books" value="<%=author.books%>" style="margin-left: 73px;"><br>
                       </div>
                       <div class="form-group">
-                        <label for="author"><b>Genre</b></label>
-                        <input type="text" placeholder="genre name" name="genre" style="margin-left: 31px;"><br>
+                        <label for="author"><b>Description</b></label>
+                        <input type="text" placeholder="Description" name="description" value="<%=author.description%>" style="margin-left: 31px;"><br>
                       </div>
                       <div class="form-group">
                         <label for="author"><b>Image</b></label>
-                      <input type="file" name="image" style="margin-left: 75px; margin-top: -25px;"><br>
+                      <input type="file" name="image" value="<%=author.image%>" style="margin-left: 111px; margin-top: -25px;"><br>
                       </div>
                       <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Add Author</button>
+                        <input type="hidden" value="<%=author._id%>" name="id">
+                        <button type="submit" class="btn btn-primary">Update Book</button>
                       </div>
+                  </form>
+                  <form action="/authors/delete/<%=author._id%>" >
+                      <input type="hidden" value="<%=author._id%>" name="id">
+                      <button type="submit" class="btn btn-primary" style="margin-top: -86px; margin-left: 38%;">Delete Book</button>
                   </form>
                 </div>
               </div>

@@ -13,8 +13,8 @@ function router(navAddBook,navSignOut){
     addauthorRouter.post('/add', function(req,res){
        var item = {
             author: req.body.author,
-            title: req.body.title, //access Query parameter here and sent it to booData.js for that we create an object with key/value pairs
-            genre: req.body.genre,
+            books: req.body.books, //access Query parameter here and sent it to booData.js for that we create an object with key/value pairs
+            description: req.body.description,
             image: req.body.image
        };
        var book = Authordata(item); //Pass the item to bookData and after passing the structure and model it will return back and saved in book variable

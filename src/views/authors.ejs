@@ -91,18 +91,24 @@
             <div class="row">    
               <br>
               <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="/img/<%=authors[i].image%>" style="width:175px; height:185px" class="img-square"></a>
+                <div class="inner" style="width: 108%;">
+                  <a class="story-title" href="#"><img alt="" src="/img/<%=authors[i].image%>" style="width:175px; height:185px" class="img-square"></a>
+                </div>
               </div>
               <div class="col-md-10 col-sm-9">
                 <h3 style="color: black;"><%=authors[i].author%></h3>
                 <div class="row">
                   <div class="col-xs-9">
-                    <h4><span class="label label-default"><%=authors[i].title%></span></h4><h4>
-                    <small style="font-family:courier,'new courier'; color: black; font-weight: bolder;" class="text-muted"><%=authors[i].genre%>
+                    <h4><span class="label label-default">All time best: <%=authors[i].books%></span></h4>
+                    <h4>
+                      <small style="font-family:courier,'new courier'; color: black; font-weight: bolder;" class="text-muted">
+                      <p class="card-text"><%=authors[i].description%></p>
                       <a href="/authors/<%=authors[i]._id%>" class="text-muted" style="color: blue;">Read More</a></small>
                     </h4></div>
                   <div class="col-xs-3"></div>
                 </div>
+                <button type="button" class="btn btn-success" style="padding: 2px 7px 2px 7px; font-size: small; font-weight: bold;  font-family: 'Ubuntu', sans-serif;">
+                  <a href="/authors/edit/<%=authors[i]._id%>">EDIT</a></button>
                 <br><br>
               </div>
             </div>

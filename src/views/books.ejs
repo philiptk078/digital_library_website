@@ -86,7 +86,9 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/img/<%=books[i].image%>" style="width:150px; height:215px" class="img-sqaure"></a>
+              <div class="inner" style="width: 108%;">
+                <a class="story-title" href="#"><img alt="" src="/img/<%=books[i].image%>" style="width:150px; height:215px" class="img-sqaure"></a>
+              </div>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3 style="color: black;"><%=books[i].title%></h3>
@@ -98,15 +100,14 @@
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
+              <button type="button" class="btn btn-success" style="padding: 2px 7px 2px 7px; font-size: small; font-weight: bold;  font-family: 'Ubuntu', sans-serif;">
+              <a href="/books/edit/<%=books[i]._id%>">EDIT</a></button>
               <br><br>
             </div>
           </div>
           <hr>
           <%}%>
           <!--/books-->
-          <div style="margin-left: 42%;">
-            <button type="button" class="btn btn-primary"><a href="/editBooks">UPDATE</a></button>
-          </div>
         </div>
       </div>                                        
    	</div><!--/col-12-->

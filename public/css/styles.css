@@ -15,6 +15,15 @@ h1,h2,h3,.highlight,.navbar a,.aa-library-details,#masthead h4{
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
 }
+.inner{
+  overflow: hidden;
+}
+.inner img{
+  transition: all 1.5s ease;
+}
+.inner:hover img{
+  transform: scale(1.5);
+}
 
 .title {
   color: #111111;
