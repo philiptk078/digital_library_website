@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="img/digital_lib_icon.png">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container"><a class="navbar-brand px-0 py-0" href="/"><img class="img-fluid pr-3 aa-logo-img" src="/img/digital_lib_logo.png" alt="logo" style="width: 112px; padding-right: 15px;"></a>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<navAdmin.length;i++){%>
+        <li>
+          <a href="<%=navAdmin[i].link%>"><%=navAdmin[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="sign-in" style="width: 65%; margin-left: 17%; margin-top: 18px;">
+<div class="container-admin">
+  <div class="signin-content">
+      <div class="signin-image">
+          <figure><img src="/img/admin-login.png" alt="sing up image" width="135%"></figure>
+          <!-- <a href="/src/views/signup.ejs" class="signup-image-link" style="color: blue;">Create an account</a> -->
+      </div>
+      
+      <div class="signin-form">
+          <h2 class="form-title">Admin - Log In</h2>
+          <form action="<%=redirect%>" class="register-form" id="login-form" onsubmit="return adminValidate()">
+              <div class="form-group">
+                  <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i>
+                      <a href="#" data-toggle="tooltip" title="Click the line to enter your user name">
+                          <!-- <img src="/img/tooltip_img.png" style="width: 12px; margin-left: 278px;"> -->
+                      </a>
+                  </label>
+                  <input type="text" name="your_email" id="username" placeholder="User name"/>
+              </div>
+              <div class="form-group">
+                  <label for="your_pass"><i class="zmdi zmdi-lock"></i>
+                      <a href="#" data-toggle="tooltip" title="Click the line to enter your password">
+                          <!-- <img src="/img/tooltip_img.png" style="width: 12px; margin-left: 278px;"> -->
+                      </a>
+                  </label>
+                  <input type="password" name="your_pass" id="password" placeholder="Password"/>
+              </div>
+              <div class="form-group form-button">
+                  <input type="submit" style="padding: 0px 12px 0px 12px" name="signin" id="signin" class="form-submit" value="Log in"/>
+              </div>
+          </form>
+          <div class="social-login">
+              <span class="social-label">Or login with</span>
+              <ul class="socials">
+                  <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                  <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                  <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div> 
+</section>
+<!--/signin-->  
+
+
+	<!-- script references -->
+    <script src="/js/adminlogin.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	</body>
+</html>

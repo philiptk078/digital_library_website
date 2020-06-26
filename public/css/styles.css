@@ -1,0 +1,222 @@
+/* override bootstrap styles */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.navbar-form input, .form-inline input {
+  width:auto;
+}
+
+body {
+  padding-top:50px;
+  color:#646464;
+  background-color:#efefef;
+}
+
+h1,h2,h3,.highlight,.navbar a,.aa-library-details,#masthead h4{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+.title {
+  color: #111111;
+}
+
+.pt-2{
+  color: #111111;
+}
+.pb-5{
+  color: #111111;
+}
+.pb-7{
+  color: #6d6d6d;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.text-muted-2{
+  color: #140000;
+  font-weight: normal;
+}
+.aa-library-details .description {
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.aa-library-details .description .h4 {
+  color: #111111;
+  padding-bottom: 1.5rem;
+  font-weight: bold;
+  
+}
+
+.aa-library-details .icon {
+  float: left;
+  margin-top: 24px;
+  margin-right: 10px;
+  font-size: 3rem;
+}
+
+.padding{
+  padding-bottom: 32px;
+  padding-top: 25px;
+}
+.display-5{
+    background-color: lightsteelblue;
+    padding: 10px 0px 8px 5px;
+    font-size: 20px;
+    width: 100%;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-outline-secondary{
+  width: 100%;
+  background-color: rgb(60, 60, 231);
+  color: white;
+  border: none;
+}
+.inner{
+  overflow: hidden;
+}
+.inner img{
+  transition: all 1.5s ease;
+}
+.inner:hover img{
+  transform: scale(1.5);
+}
+.card-img-top-a{
+  width: 250px;
+  height: 250px;
+  margin-left: 25px ;
+}
+
+.panel {
+  border-color:transparent;
+  border-radius:0;
+  background: linear-gradient(to right, #099904, #40fd7f);
+}
+#topPanel {
+  padding-top:0px;
+  padding-left:22px;
+  padding-right:22px;
+}
+#topPanel .panel-body {
+  padding-top:0px;
+
+}
+.navbar-bright {
+  background-color:#054b0b;
+  color:#fff;
+  margin-bottom: 0;
+  border-width: 0;
+}
+
+.navbar-bright a, .navbar-bright .navbar-brand #masthead h4{
+  color:#00ff22;
+  font-size:14px;
+  text-transform: uppercase;
+  letter-spacing:.08em;
+}
+
+.navbar-bright li > a:hover {
+  background-color:#ffffff;
+}
+
+.navbar-toggle {
+  color:#fff;
+  border-width:0;
+}
+
+.navbar-toggle:hover {
+  background-color:#fff;
+}
+
+.navbar.affix {
+  position:fixed;
+  top:0;
+  width:100%;
+}
+#masthead {
+  min-height:199px;
+  background-color:#039603;
+  color:#aaaacc;
+  margin: 0px 104px 0px 106px;
+}
+
+#masthead h1 {
+  font-size: 55px;
+  line-height: 1;
+  color:#fefeff;
+  margin-top:50px;
+}
+
+#masthead .well {
+  margin-top:31px;
+  background: linear-gradient(to right, #099904, #40fd7f);
+  border-color:#000022;
+  color:#efefff;
+  min-height:127px;
+  margin-right: 12%;
+}
+@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 80px;
+  }
+}
+
+
+a,a:hover {
+  color:#223344;
+  text-decoration:none;
+}
+
+
+.aa-testimonials-section .aa-testimonials {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.aa-testimonials-section .aa-testimonials img {
+  border-radius: 100%;
+  width: 96px;
+  height: auto;
+}
+
+.aa-testimonials-section .aa-testimonials .aa-testimonials-body {
+  background-color: #F5FAFD;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px -4px;
+}
+
+.aa-testimonials-section .aa-testimonials .h5 {
+  color: #111111;
+}
+
+@media (max-width: 992px) {
+  .aa-testimonials-section .aa-testimonials .aa-testimonials-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .aa-testimonials-section .aa-testimonials .aa-testimonials-body p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aa-testimonials-section .aa-testimonials .aa-testimonials-body {
+    text-align: center;
+  }
+  .aa-testimonials-section .aa-testimonials .aa-testimonials-body {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+footer {
+  background-color:#050505;
+}

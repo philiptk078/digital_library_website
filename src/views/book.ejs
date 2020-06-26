@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="/img/digital_lib_icon.png">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container"><a class="navbar-brand px-0 py-0" href="/"><img class="img-fluid pr-3 aa-logo-img" src="/img/digital_lib_logo.png" alt="logo" style="width: 112px; padding-right: 15px;"></a>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<navWelcome.length;i++){%>
+        <li>
+          <a href="<%=navWelcome[i].link%>"><%=navWelcome[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav" style="padding-right: 31px;">
+        <%for(i=0;i<navSignOut.length;i++){%>
+          <li>
+            <a href="<%=navSignOut[i].link%>"><%=navSignOut [i].name%></a>
+          </li>
+        <%}%>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Book
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              <h5>“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.”
+                <br><span style="padding-left: 62%;">― Charles W. Eliot</span></h5>
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"> 
+      <div class="panel">
+        <div class="panel-body">
+          <!--/books-->
+          <div class="row">    
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+              <a class="story-title" href="#"><img alt="" src="/img/<%=book.image%>" style="width:150px; height:215px" class="img-sqaure"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3 style="color: black;"><%=book.title%></h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <h4><span class="label label-default"><%=book.author%></span></h4><h4>
+                  <small style="font-family:courier,'new courier'; font-weight: bolder; color: black;" class="text-muted"><%=book.genre%>
+                  </h4></div>
+                <div class="col-xs-3"></div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <hr>
+          <!--/books-->
+          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+      </div>                                  
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<!-- footer -->
+<footer class="footer-black aa-footer">  
+  <div class="container-fluid padding">
+    <div class="row text-center pb-7">
+        <div class="col-md-4">
+
+            <img src="/img/digital_lib_logo.png" style="padding-top: 7px;" >
+            <hr class="light">
+            <p>info@digital-library.com</p>
+            <p>+91-0011320086</p>
+            <p>ICT Academy of Kerala</p>
+            <p>Palakkad, Kerala</p>
+        </div>
+        <div class="col-md-4">
+            <hr class="light">
+            <h5>Our hours</h5>
+            <hr class="light">
+            <p>Monday: 9am - 5pm</p>
+            <p>Satuarday: 10am - 4pm</p>
+            <p>Sunday: Closed</p>
+        </div>
+        <div class="col-md-4">
+            <hr class="light">
+            <h5>Services</h5>
+            <hr class="light">
+            <p>Auto Renewal of Books</p>
+            <p>Daily Notifications</p>
+            <p>Authors Review</p>
+            <p>Online Support</p>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+              <div class="col-md-12"><a class="btn btn-link btn-neutral" href="#">
+                <i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a><a class="btn btn-link btn-neutral" href="#">
+                <i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a><a class="btn btn-link btn-neutral" href="#">
+                <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a><a class="btn btn-link btn-neutral" href="#">
+                <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+              </div>
+              <p class="mt-3">copyright &copy; digitallibrary@philip.com<br>All rights reserved.</p>
+        </div>
+        </div>
+    </div>
+</div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>
